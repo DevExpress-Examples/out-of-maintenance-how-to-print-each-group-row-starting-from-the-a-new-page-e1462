@@ -25,33 +25,24 @@ namespace Q205815 {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.myGridControl1 = new DXSample.MyGridControl();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nwindDataSet = new Q205815.nwindDataSet();
             this.myGridView1 = new DXSample.MyGridView();
-            this.colProductID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCategoryID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.productsTableAdapter = new Q205815.nwindDataSetTableAdapters.ProductsTableAdapter();
-            this.categoriesTableAdapter = new Q205815.nwindDataSetTableAdapters.CategoriesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.myGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // myGridControl1
             // 
-            this.myGridControl1.DataSource = this.productsBindingSource;
             this.myGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.myGridControl1.EmbeddedNavigator.Name = "";
             this.myGridControl1.Location = new System.Drawing.Point(0, 0);
             this.myGridControl1.MainView = this.myGridView1;
             this.myGridControl1.Name = "myGridControl1";
@@ -62,67 +53,59 @@ namespace Q205815 {
             this.myGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.myGridView1});
             // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.nwindDataSet;
-            // 
-            // nwindDataSet
-            // 
-            this.nwindDataSet.DataSetName = "nwindDataSet";
-            this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // myGridView1
             // 
             this.myGridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colProductID,
-            this.colProductName,
-            this.colCategoryID});
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4});
             this.myGridView1.GridControl = this.myGridControl1;
             this.myGridView1.GroupCount = 1;
             this.myGridView1.Name = "myGridView1";
             this.myGridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colCategoryID, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn3, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
-            // colProductID
+            // gridColumn1
             // 
-            this.colProductID.Caption = "ID";
-            this.colProductID.FieldName = "ProductID";
-            this.colProductID.Name = "colProductID";
-            this.colProductID.Visible = true;
-            this.colProductID.VisibleIndex = 0;
+            this.gridColumn1.Caption = "FirstName";
+            this.gridColumn1.FieldName = "FirstName";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
             // 
-            // colProductName
+            // gridColumn2
             // 
-            this.colProductName.Caption = "Name";
-            this.colProductName.FieldName = "ProductName";
-            this.colProductName.Name = "colProductName";
-            this.colProductName.Visible = true;
-            this.colProductName.VisibleIndex = 1;
+            this.gridColumn2.Caption = "SecondName";
+            this.gridColumn2.FieldName = "SecondName";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
             // 
-            // colCategoryID
+            // gridColumn3
             // 
-            this.colCategoryID.Caption = "Category";
-            this.colCategoryID.ColumnEdit = this.repositoryItemLookUpEdit1;
-            this.colCategoryID.FieldName = "CategoryID";
-            this.colCategoryID.Name = "colCategoryID";
-            this.colCategoryID.Visible = true;
-            this.colCategoryID.VisibleIndex = 2;
+            this.gridColumn3.Caption = "Age";
+            this.gridColumn3.FieldName = "Age";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "ID";
+            this.gridColumn4.FieldName = "ID";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
             // 
             // repositoryItemLookUpEdit1
             // 
             this.repositoryItemLookUpEdit1.AutoHeight = false;
             this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.DataSource = this.categoriesBindingSource;
             this.repositoryItemLookUpEdit1.DisplayMember = "CategoryName";
             this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             this.repositoryItemLookUpEdit1.ValueMember = "CategoryID";
-            // 
-            // categoriesBindingSource
-            // 
-            this.categoriesBindingSource.DataMember = "Categories";
-            this.categoriesBindingSource.DataSource = this.nwindDataSet;
             // 
             // panelControl1
             // 
@@ -142,14 +125,6 @@ namespace Q205815 {
             this.simpleButton1.Text = "Show Print Preview";
             this.simpleButton1.Click += new System.EventHandler(this.OnShowPrintPreviewSimpleButtonClick);
             // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
-            // 
-            // categoriesTableAdapter
-            // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,11 +136,8 @@ namespace Q205815 {
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.myGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -177,17 +149,12 @@ namespace Q205815 {
         private DXSample.MyGridControl myGridControl1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private nwindDataSet nwindDataSet;
-        private System.Windows.Forms.BindingSource productsBindingSource;
-        private Q205815.nwindDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
-        private System.Windows.Forms.BindingSource categoriesBindingSource;
-        private Q205815.nwindDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter;
         private DXSample.MyGridView myGridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductID;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductName;
-        private DevExpress.XtraGrid.Columns.GridColumn colCategoryID;
-
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }
 
