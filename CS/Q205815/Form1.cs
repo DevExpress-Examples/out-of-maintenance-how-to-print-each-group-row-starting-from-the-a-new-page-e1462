@@ -1,26 +1,35 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
-namespace Q205815 {
-    public partial class Form1 : Form {
-        public Form1() {
+namespace Q205815
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'nwindDataSet.Categories' table. You can move, or remove it, as needed.
-            this.categoriesTableAdapter.Fill(this.nwindDataSet.Categories);
-            // TODO: This line of code loads data into the 'nwindDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.nwindDataSet.Products);
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            myGridControl1.DataSource = GetPersonDataTable();
 
         }
-
-        private void OnShowPrintPreviewSimpleButtonClick(object sender, EventArgs e) {
+        DataTable GetPersonDataTable()
+        {
+            DataTable table = new DataTable();
+            table.TableName = "Persons";
+            table.Columns.Add(new DataColumn("FirstName", typeof(string)));
+            table.Columns.Add(new DataColumn("SecondName", typeof(string)));
+            table.Columns.Add(new DataColumn("Age", typeof(int)));
+            table.Columns.Add(new DataColumn("ID", typeof(int)));
+            for (int i = 0; i < 150; i++)
+                table.Rows.Add("FirstName " + i, "SecondName " + i, 20 + i / 15, i);
+            return table;
+        }
+        private void OnShowPrintPreviewSimpleButtonClick(object sender, EventArgs e)
+        {
             myGridControl1.ShowPrintPreview();
         }
     }
