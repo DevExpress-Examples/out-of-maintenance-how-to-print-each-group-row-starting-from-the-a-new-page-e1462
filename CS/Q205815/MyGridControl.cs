@@ -42,7 +42,7 @@ namespace DXSample {
             SetDefaultBrickStyle(Graph, Bricks["GroupRow"]);
             Brick brick = (Brick)DrawTextBrick(Graph, View.GetGroupRowDisplayText(rowHandle), r, true);
             if (Y != 0)
-                ((PSLinkDocument)((PrintingSystemBase)PS).Document).ShowFromNewPage(brick);
+                ((PSLinkDocument)((PrintingSystemBase)PrintingSystemBase).Document).ShowFromNewPage(brick);
             Y += r.Height;
         }
     }
