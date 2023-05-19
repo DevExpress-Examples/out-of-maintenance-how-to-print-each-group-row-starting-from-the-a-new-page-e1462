@@ -1,5 +1,7 @@
-﻿Namespace Q205815
-    Partial Public Class Form1
+Namespace Q205815
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -33,10 +35,10 @@
             Me.repositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
             Me.panelControl1 = New DevExpress.XtraEditors.PanelControl()
             Me.simpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-            CType(Me.myGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.myGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.repositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.panelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.myGridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.myGridView1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.repositoryItemLookUpEdit1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.panelControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.panelControl1.SuspendLayout()
             Me.SuspendLayout()
             ' 
@@ -46,18 +48,18 @@
             Me.myGridControl1.Location = New System.Drawing.Point(0, 0)
             Me.myGridControl1.MainView = Me.myGridView1
             Me.myGridControl1.Name = "myGridControl1"
-            Me.myGridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() { Me.repositoryItemLookUpEdit1})
+            Me.myGridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.repositoryItemLookUpEdit1})
             Me.myGridControl1.Size = New System.Drawing.Size(745, 524)
             Me.myGridControl1.TabIndex = 0
-            Me.myGridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.myGridView1})
+            Me.myGridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.myGridView1})
             ' 
             ' myGridView1
             ' 
-            Me.myGridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() { Me.gridColumn1, Me.gridColumn2, Me.gridColumn3, Me.gridColumn4})
+            Me.myGridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.gridColumn1, Me.gridColumn2, Me.gridColumn3, Me.gridColumn4})
             Me.myGridView1.GridControl = Me.myGridControl1
             Me.myGridView1.GroupCount = 1
             Me.myGridView1.Name = "myGridView1"
-            Me.myGridView1.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() { New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.gridColumn3, DevExpress.Data.ColumnSortOrder.Ascending)})
+            Me.myGridView1.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.gridColumn3, DevExpress.Data.ColumnSortOrder.Ascending)})
             ' 
             ' gridColumn1
             ' 
@@ -94,7 +96,7 @@
             ' repositoryItemLookUpEdit1
             ' 
             Me.repositoryItemLookUpEdit1.AutoHeight = False
-            Me.repositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+            Me.repositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
             Me.repositoryItemLookUpEdit1.DisplayMember = "CategoryName"
             Me.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1"
             Me.repositoryItemLookUpEdit1.ValueMember = "CategoryID"
@@ -115,6 +117,7 @@
             Me.simpleButton1.Size = New System.Drawing.Size(104, 23)
             Me.simpleButton1.TabIndex = 0
             Me.simpleButton1.Text = "Show Print Preview"
+            Me.simpleButton1.Click += New System.EventHandler(AddressOf Me.OnShowPrintPreviewSimpleButtonClick)
             ' 
             ' Form1
             ' 
@@ -125,26 +128,32 @@
             Me.Controls.Add(Me.panelControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            CType(Me.myGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.myGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.repositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.panelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.Load += New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.myGridControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.myGridView1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.repositoryItemLookUpEdit1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.panelControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.panelControl1.ResumeLayout(False)
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private myGridControl1 As DXSample.MyGridControl
+
         Private panelControl1 As DevExpress.XtraEditors.PanelControl
-        Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
+
+        Private simpleButton1 As DevExpress.XtraEditors.SimpleButton
+
         Private repositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+
         Private myGridView1 As DXSample.MyGridView
+
         Private gridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+
         Private gridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
+
         Private gridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
+
         Private gridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     End Class
 End Namespace
-
