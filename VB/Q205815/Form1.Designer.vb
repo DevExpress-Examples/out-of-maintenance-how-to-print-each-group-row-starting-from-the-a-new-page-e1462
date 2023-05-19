@@ -117,7 +117,7 @@ Namespace Q205815
             Me.simpleButton1.Size = New System.Drawing.Size(104, 23)
             Me.simpleButton1.TabIndex = 0
             Me.simpleButton1.Text = "Show Print Preview"
-            Me.simpleButton1.Click += New System.EventHandler(AddressOf Me.OnShowPrintPreviewSimpleButtonClick)
+        AddHandler simpleButton1.Click, New System.EventHandler(AddressOf Me.OnShowPrintPreviewSimpleButtonClick)
             ' 
             ' Form1
             ' 
@@ -128,7 +128,7 @@ Namespace Q205815
             Me.Controls.Add(Me.panelControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            Me.Load += New System.EventHandler(AddressOf Me.Form1_Load)
+        AddHandler Load, New System.EventHandler(AddressOf Me.Form1_Load)
             CType((Me.myGridControl1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.myGridView1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.repositoryItemLookUpEdit1), System.ComponentModel.ISupportInitialize).EndInit()
