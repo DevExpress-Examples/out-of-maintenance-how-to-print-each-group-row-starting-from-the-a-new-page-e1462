@@ -79,7 +79,7 @@ Namespace DXSample
             r.Height = CurrentRowHeight
             SetDefaultBrickStyle(Graph, Bricks("GroupRow"))
             Dim brick As Brick = CType(DrawTextBrick(Graph, View.GetGroupRowDisplayText(rowHandle), r, True), Brick)
-            If Y IsNot 0 Then CType(CType(PrintingSystemBase, PrintingSystemBase).Document, PSLinkDocument).ShowFromNewPage(brick)
+            If Y <> 0 Then CType(CType(PrintingSystemBase, PrintingSystemBase).Document, PSLinkDocument).ShowFromNewPage(brick)
             Y += r.Height
         End Sub
     End Class
